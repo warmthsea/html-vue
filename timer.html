@@ -23,8 +23,8 @@
 <script src="https://unpkg.com/@vueuse/shared"></script>
 <script src="https://unpkg.com/@vueuse/core"></script>
 <script>
-  Object.assign(window, Vue)
   const { useNow, useDateFormat } = VueUse
+  const { createApp, onMounted } = Vue
 
   const vue3Composition = {
     setup() {
@@ -32,9 +32,9 @@
       onMounted(() => {})
 
       return { formatted }
-    },
+    }
   }
 
-  const app = Vue.createApp(vue3Composition)
+  const app = createApp(vue3Composition)
   app.mount('#app')
 </script>
