@@ -4,6 +4,7 @@
 ```bash
 git clone https://github.com/warmthsea/html-vue.git
 ```
+or Download Zip
 
 ### step2
 Open with vscode, Install recommended plugins
