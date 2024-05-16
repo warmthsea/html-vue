@@ -14,13 +14,13 @@
 <body>
   <div id="app">
     <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
-      <div class="flex items-center">
+      <div class="flex items-center flex-col md:flex-row">
         <div class="flex items-center *:h-20">
           <img src="./assets/html.svg">
           <span class="mx-2 ml-3 leading-loose">+</span>
           <img src="./assets/vue.svg">
         </div>
-        <p class="ml-8">{{title}}</p>
+        <p class="ml-4 mt-6 md:ml-8 md:mt-0">{{title}}</p>
       </div>
       <div class="mt-10 text-lg">
         <button @click="count++"
