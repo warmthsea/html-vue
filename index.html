@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/vue.svg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./tailwind/config.js"></script>
-    <title>html-vue</title>
-  </head>
 
-  <body>
-    <div id="app">
-      <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
-        <div class="flex items-center">
-          <div class="flex items-center *:h-20">
-            <img src="./assets/html.svg">
-            <span class="mx-2 ml-3 leading-loose">+</span>
-            <img src="./assets/vue.svg">
-          </div>
-          <p class="ml-8">{{title}}</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/vue.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./tailwind/config.js"></script>
+  <title>html-vue</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
+      <div class="flex items-center">
+        <div class="flex items-center *:h-20">
+          <img src="./assets/html.svg">
+          <span class="mx-2 ml-3 leading-loose">+</span>
+          <img src="./assets/vue.svg">
         </div>
-        <div class="mt-10 text-lg">
-          <button @click="count ++" class="px-5 py-1 text-white rounded-full bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
-            Count is: {{count }}
-          </button>
-        </div>
+        <p class="ml-8">{{title}}</p>
+      </div>
+      <div class="mt-10 text-lg">
+        <button @click="count++"
+          class="px-5 py-1 text-white rounded-full bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">
+          Count is: {{count }}
+        </button>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -36,7 +39,7 @@
 <script src="https://unpkg.com/@vueuse/core"></script>
 <script type="module">
   const { useNow, useDateFormat } = VueUse
-  const { createApp, ref,onMounted } = Vue
+  const { createApp, ref, onMounted } = Vue
 
   const vue3Composition = {
     setup() {
@@ -45,9 +48,9 @@
 
       const formatted = useDateFormat(useNow(), 'YYYY-MM-DD HH:mm:ss')
 
-      onMounted(() => {})
+      onMounted(() => { })
 
-      return { title,count,formatted }
+      return { title, count, formatted }
     }
   }
 

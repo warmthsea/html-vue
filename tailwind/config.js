@@ -1,11 +1,11 @@
 tailwind.config = {
-    content: ["*.{html,js}"],
-    theme: {
-      extend: {
-        colors: {
-            main: '#da373d',
-        }
-      },
+  content: ["*.{html,js}"],
+  theme: {
+    extend: {
+      colors: {
+        main: '#da373d',
+      }
     },
-    plugins: [],
+  },
+  plugins: [],
 }
