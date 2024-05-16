@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "vue.volar",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "ritwickdey.LiveServer"
   ]
 }
