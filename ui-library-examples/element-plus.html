@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/vue.svg">
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../config/tailwind.js"></script>
+    <title>html-vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="font-mono w-screen h-screen flex flex-col items-center justify-center text-4xl">
+            <div>
+                {{ title}}
+            </div>
+
+            <div class="my-4">
+                <el-button>Default</el-button>
+                <el-button type="primary">Primary</el-button>
+                <el-button type="success">Success</el-button>
+                <el-button type="info">Info</el-button>
+                <el-button type="warning">Warning</el-button>
+                <el-button type="danger">Danger</el-button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/element-plus"></script>
+<script type="module">
+    const { createApp, ref, onMounted } = Vue
+
+    const vue3Composition = {
+        setup() {
+            const title = 'Hello Element-plus!'
+
+            onMounted(() => { })
+
+            return { title }
+        }
+    }
+
+    const app = createApp(vue3Composition)
+    app.use(ElementPlus)
+    app.mount('#app')
+</script>
